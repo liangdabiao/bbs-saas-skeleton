@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "81d024ea-c821-4e0d-8f23-67e1893ee7bb",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "图片验证码",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/captchas?phone=13534834914",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"captchas"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "13534834914"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "发短信",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "phone",
+						"value": "13534734514",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/verificationCodes?captcha_key=captcha-uYLiKaWP63rIOE5&captcha_code=ErNYC",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"verificationCodes"
+					],
+					"query": [
+						{
+							"key": "captcha_key",
+							"value": "captcha-uYLiKaWP63rIOE5"
+						},
+						{
+							"key": "captcha_code",
+							"value": "ErNYC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "手机注册用户",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/users?verification_code=1234&verification_key=verificationCode_vODHJEwOInJt1I1&password=123456789&name=ldb0&phone=13534834915",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "verification_code",
+							"value": "1234"
+						},
+						{
+							"key": "verification_key",
+							"value": "verificationCode_vODHJEwOInJt1I1"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						},
+						{
+							"key": "name",
+							"value": "ldb0"
+						},
+						{
+							"key": "phone",
+							"value": "13534834915"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "微信回调",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/socials/wechat/authorizations?code=041ot2000GNI0N1Dov000G6sdJ2ot20t",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"socials",
+						"wechat",
+						"authorizations"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "041ot2000GNI0N1Dov000G6sdJ2ot20t"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登录",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "497070928@qq.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ya123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/authorizations",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"authorizations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd29vMy5zYWFzLnRlc3RcL2FwaVwvdjFcL2F1dGhvcml6YXRpb25zIiwiaWF0IjoxNjQwMzM1NzUyLCJleHAiOjE2NDAzMzkzNTIsIm5iZiI6MTY0MDMzNTc1MiwianRpIjoiR3QwdFpyU3M0QVRKc3hycCIsInN1YiI6MjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.bHwfi52RBtUk_JKsmISYeGDaL113Lx9w9XLm9y_PMug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/user",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/users/1",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload-image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd29vMy5zYWFzLnRlc3RcL2FwaVwvdjFcL2F1dGhvcml6YXRpb25zIiwiaWF0IjoxNjQwMzU3OTM1LCJleHAiOjE2NDAzNjE1MzUsIm5iZiI6MTY0MDM1NzkzNSwianRpIjoiTldxeWZ2SjZLTTU4elFPMiIsInN1YiI6MjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.JkCoIGSFUiugAq9Mu47_Hw20ZeJUjwNBbuIeLfucXfI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "avatar",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/MI/Pictures/微信图片_20211116190644.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/images?image&type=avatar",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"images"
+					],
+					"query": [
+						{
+							"key": "image",
+							"value": null
+						},
+						{
+							"key": "type",
+							"value": "avatar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新用户",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd29vMy5zYWFzLnRlc3RcL2FwaVwvdjFcL2F1dGhvcml6YXRpb25zIiwiaWF0IjoxNjQwMzU3OTM1LCJleHAiOjE2NDAzNjE1MzUsIm5iZiI6MTY0MDM1NzkzNSwianRpIjoiTldxeWZ2SjZLTTU4elFPMiIsInN1YiI6MjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.JkCoIGSFUiugAq9Mu47_Hw20ZeJUjwNBbuIeLfucXfI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/user?name=test1&avatar_iamge_id=1&email=497070928@qq.com",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test1"
+						},
+						{
+							"key": "avatar_iamge_id",
+							"value": "1"
+						},
+						{
+							"key": "email",
+							"value": "497070928@qq.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd29vMy5zYWFzLnRlc3RcL2FwaVwvdjFcL2F1dGhvcml6YXRpb25zIiwiaWF0IjoxNjQwMzU3OTM1LCJleHAiOjE2NDAzNjE1MzUsIm5iZiI6MTY0MDM1NzkzNSwianRpIjoiTldxeWZ2SjZLTTU4elFPMiIsInN1YiI6MjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.JkCoIGSFUiugAq9Mu47_Hw20ZeJUjwNBbuIeLfucXfI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://woo3.saas.test/api/v1/categories",
+					"protocol": "https",
+					"host": [
+						"woo3",
+						"saas",
+						"test"
+					],
+					"path": [
+						"api",
+						"v1",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
